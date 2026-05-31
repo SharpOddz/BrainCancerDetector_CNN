@@ -22,4 +22,4 @@ For version 1 of this model (V1), the training, validation, and test accuracy wa
 
 
 ## Dataset
-Using dataset found at: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+Dataset for this project can be found at: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
