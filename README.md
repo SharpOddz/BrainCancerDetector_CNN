@@ -6,6 +6,11 @@ Downloading of the dataset is required to run this model (The dataset can be fou
 
 ## Model Architecture & Hyperparameters
 
+#### Version 1 (V1)
+V1 utilized 
+<img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/c381f11a-639a-45ad-b466-d3bfcb930df8" />
+
+
 ## Results
 
 #### Version 1 (V1)
