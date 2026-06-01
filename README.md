@@ -7,11 +7,11 @@ Downloading of the dataset is required to run this model (The dataset can be fou
 ## Model Architecture & Hyperparameters
 
 #### Version 1 (V1)
-V1's architecture was a simple CNN struture
+V1's architecture is a simple CNN struture and is used as the baseline for this project. It takes input image of 224x224x3 and goes through five convolutional layers (each with a 3x3 filter, doubling number of filters, batch normalization, ReLU activations, and 2x2 max pooling to halve spatial resolution). The sixth and final convolutional layer uses 512 1x1 filters before global average pooling that fully connects to the output layer.
 <img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/c381f11a-639a-45ad-b466-d3bfcb930df8" />
 
 #### Version 2 (V2) (Not finished tuning as of 5/31/2026)
-V2 adds additional convolutional layers while keeping spatial resolution larger. 
+V2 adds additional convolutional layers while keeping spatial resolution larger. It also adds spatial dropout to the last 2 convolutional layers.
 
 ## Results
 
