@@ -1,5 +1,5 @@
 # BrainTumorMRIDetector_CNN
-Utilizing a Convolutional Neural Network to detect tumors in brain MRI images. There are several different versions of CNN architecture are used in this repository. Each version's arcitecture are detailed in the "Model Architecture and Hyperparameters" section and are compared in the result section. Version 1 (v1) was built first and used as a baseline for further versions. Once each version has been optimized it was run once on the test set. 
+Utilizing a Convolutional Neural Network to detect tumors in brain MRI images. There are several different versions of CNN architecture are used in this repository. Each version's arcitecture are detailed in the "Model Architecture and Hyperparameters" section and are compared in the result section. Version 1 (v1) was built first and used as a baseline for further versions. Once each model version has been optimized it was run once on the test set as a final benchmark. For fair comparison, each model resizes the input image to 224x224 (different model versions will do additional preprocessing steps). 
 
 ## Requirements
 Downloading of the dataset is required to run this model (The dataset can be found below). Required libraries: 
@@ -12,7 +12,7 @@ V1's architecture is a simple CNN struture and is used as the baseline for this 
 <img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/c381f11a-639a-45ad-b466-d3bfcb930df8" />
 
 #### Version 2 (V2) (Not finished tuning as of 6/01/2026)
-V2 adds additional convolutional layers while keeping spatial resolution larger. It also adds spatial dropout to the last 3 convolutional layers. 
+THere are several speed and performance optimizations made in V2, especially noticeable if using Google Colab to run the model. V2 adds additional convolutional layers while keeping spatial resolution larger. It also adds spatial dropout to the last 3 convolutional layers. 
 
 ## Results
 
