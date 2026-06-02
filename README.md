@@ -11,8 +11,8 @@ V1's architecture is a simple CNN struture and is used as the baseline for this 
 
 <img width="1389" height="490" alt="image" src="https://github.com/user-attachments/assets/c381f11a-639a-45ad-b466-d3bfcb930df8" />
 
-#### Version 2 (V2) (Not finished tuning as of 6/01/2026)
-THere are several speed and performance optimizations made in V2, especially noticeable if using Google Colab to run the model. V2 adds additional convolutional layers while keeping spatial resolution larger. It also adds spatial dropout to the last 3 convolutional layers. 
+#### Version 2 (V2) 
+THere are several speed and performance optimizations made in V2, especially noticeable if using Google Colab to run the model. V2 adds additional convolutional layers while keeping spatial resolution larger. It also adds spatial dropout to the last convolutional layers. The training/val loss/accuracy history plot was lost and is not shown. The model trained for 71 epochs, with the best model restored at epoch 61. 
 
 ## Results
 
@@ -21,6 +21,12 @@ For version 1 of this model (V1), the training, validation, and test accuracy wa
 
 <img width="1960" height="590" alt="image" src="https://github.com/user-attachments/assets/54128eef-3aa7-491f-ac63-75dea2cd6329" />
 <img width="456" height="129" alt="image" src="https://github.com/user-attachments/assets/98a0281f-7428-423f-819a-b55d8fedc137" />
+
+#### Version 2 (V2)
+For the V2 model the training, validation, and test accuracies were 99.03%, 96.43%, and 89.25% respectively. Corresponding confusion matrices are shown below:
+
+<img width="1960" height="590" alt="image" src="https://github.com/user-attachments/assets/43d7e83a-f5a7-4809-80cd-61b87fb4ceec" />
+<img width="461" height="136" alt="image" src="https://github.com/user-attachments/assets/ca7dcc56-ae51-4876-b8a5-6893b233f172" />
 
 
 
