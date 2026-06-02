@@ -24,9 +24,9 @@ epochs = 75
 batch_size = 32
 img_height, img_width = 224, 224
 input_shape = (img_height, img_width, 3)
-learning_rate = 0.00005
+learning_rate = 0.0001
 validation_split = 0.1
-spatial_dropout_rate = 0.2
+spatial_dropout_rate = 0.1
 dropout_rate = 0.2
 
 #Loading datasets
@@ -90,36 +90,38 @@ model = tf.keras.models.Sequential([
     layers.Rescaling(1./255),
     data_augmentation,
     #Convolutional Block 1
-    layers.Conv2D(32, (3, 3), padding='same', use_bias=False),
+    layers.Conv2D(16, (3, 3), padding='same', use_bias=False),
     layers.BatchNormalization(),
     layers.Activation('relu'),
-    layers.Conv2D(64, (3, 3), padding='same', use_bias=False),
+    layers.Conv2D(32, (3, 3), padding='same', use_bias=False),
     layers.BatchNormalization(),
     layers.Activation('relu'),
     layers.MaxPooling2D((2, 2)),
     #Convolutional Block 2
+    layers.Conv2D(64, (3, 3), padding='same', use_bias=False),
+    layers.BatchNormalization(),
+    layers.Activation('relu'),
     layers.Conv2D(128, (3, 3), padding='same', use_bias=False),
+    layers.BatchNormalization(),
+    layers.Activation('relu'),
+    layers.MaxPooling2D((2, 2)),
+    #Convolutional Block 3
+    layers.Conv2D(256, (3, 3), padding='same', use_bias=False),
     layers.BatchNormalization(),
     layers.Activation('relu'),
     layers.Conv2D(256, (3, 3), padding='same', use_bias=False),
     layers.BatchNormalization(),
     layers.Activation('relu'),
-    layers.SpatialDropout2D(spatial_dropout_rate),
     layers.MaxPooling2D((2, 2)),
-    #Convolutional Block 3
-    layers.Conv2D(512, (3, 3), padding='same', use_bias=False),
-    layers.BatchNormalization(),
-    layers.Activation('relu'),
-    layers.SpatialDropout2D(spatial_dropout_rate),
-    layers.Conv2D(1024, (3, 3), padding='same', use_bias=False),
+    #Convolutional Block 4
+    layers.Conv2D(256, (3, 3), padding='same', use_bias=False),
     layers.BatchNormalization(),
     layers.Activation('relu'),
     layers.SpatialDropout2D(spatial_dropout_rate),
     layers.MaxPooling2D((2, 2)),
     #Dense Layers
-    layers.GlobalAveragePooling2D(),
-    layers.Dropout(dropout_rate),
-    layers.Dense(128, activation='relu'),
+    layers.Flatten(),
+    layers.Dense(256, activation='relu'),
     layers.Dropout(dropout_rate),
     layers.Dense(4, activation='softmax', dtype='float32')
 ])
