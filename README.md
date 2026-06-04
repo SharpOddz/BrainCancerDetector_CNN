@@ -27,6 +27,8 @@ Similar to V1 but with residual blocks. Regular dropout is used for the fully co
 
 <img width="188" height="536" alt="image" src="https://github.com/user-attachments/assets/7da775ae-d064-4cab-b2ad-cbd61431e66b" />
 
+#### Version 4 (V4)
+Adds squeeze and excititation attention. This model has SE-ResNet-Style blocks.
 
 ## Results
 
